@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+$page.setTitle("VBM Details")
+$page.setLinkColor($ui.alink)
+$page.setVlinkColor($ui.vlink)
+#if ($data.getParameters().getString("popup"))
+	#set ($popup = $data.getParameters().getString("popup") )
+	#set ($popup = "false")
+#end
+<TABLE width="100%">
+	<TR>
+		<TD>
+			<table width="100%">
+				<TR>
+					<TD align="left" valign="middle">
+						<font face="$ui.sansSerifFonts" size="3"><b>VBM Details</b></font>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE width="100%">
+				<TR>
+					<TD valign="top">
+						<TABLE>
+							<TR><TD>MRSession</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/imageSession_ID")</TD></TR>
+							<TR><TD>ID</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/label")</TD></TR>
+							<TR><TD>Project</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/project")</TD></TR>
+							<TR><TD>Base Scan Number</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/baseScanNumber")</TD></TR>
+							<tr></tr>	
+							<TR><TH>VBM Volumetry Results (mm3)</TH></TR>
+							<TR><TD>GM Volume</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/GM_Volume")</TD></TR>
+							<TR><TD>WM Volume</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/WM_Volume")</TD></TR>
+							<TR><TD>CSF Volume</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/CSF_Volume")</TD></TR>
+							<TR><TD>Left Hippocampus Volume</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/HYPL_Volume")</TD></TR>
+							<TR><TD>Right Hippocampus Volume</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/HYPR_Volume")</TD></TR>
+							<TR><TH>Algorithm parameters</TH></TR>
+							<TR><TD>Stereotaxic Space</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/StereotaxicSpace")</TD></TR>
+							<TR><TD>SPM Version</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/AlgoNorm")</TD></TR>	
+							<TR><TD>Atlas used for hippocampus volume</TD><TD></TD><TD>$!item.getStringProperty("vbm:vbmAssessorData/AtlasHyp")</TD></TR>
+						</TABLE>
+					</TD>
+					<TD valign="top" align="right">
+						#elementActionsBox($element $search_field $search_value $data.getSession().getAttribute("user") $item)
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</table>
+									
+
+

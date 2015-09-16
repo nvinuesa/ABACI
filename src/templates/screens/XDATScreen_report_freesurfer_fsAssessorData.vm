@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+$page.setTitle("Freesurfer Details")
+$page.setLinkColor($ui.alink)
+$page.setVlinkColor($ui.vlink)
+#if ($data.getParameters().getString("popup"))
+	#set ($popup = $data.getParameters().getString("popup") )
+	#set ($popup = "false")
+#end
+<TABLE width="100%">
+	<TR>
+		<TD>
+			<table width="100%">
+				<TR>
+					<TD align="left" valign="middle">
+						<font face="$ui.sansSerifFonts" size="3"><b>Freesurfer Assessor Details</b></font>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE width="100%">
+				<TR>
+					<TD valign="top">
+						<TABLE>
+							<TR><TD>MRSession</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/imageSession_ID")</TD></TR>
+							<TR><TD>ID</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/label")</TD></TR>
+							<TR><TD>Project</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/project")</TD></TR>
+							<TR><TD>Freesurfer version</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/fs_version")</TD></TR>
+							<tr></tr>	
+							<TR><TH>Freesurfer Results (mm3)</TH></TR>
+							<TR><TD>Estimated Total Intracranial Volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/icv")</TD></TR>
+							<TR><TH>Grey matter:</TH></TR>
+							<TR><TD>Left cortical volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_volCortex")</TD></TR>
+							<TR><TD>Right cortical volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_volCortex")</TD></TR>
+							<TR><TD>Total cortical volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_volCortex")</TD></TR>
+							<TR><TD>Left cerebellum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_volCerebellum")</TD></TR>
+							<TR><TD>Right cerebellum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_volCerebellum")</TD></TR>
+							<TR><TD>Total cerebellum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_volCerebellum")</TD></TR>
+							<TR><TD>Left nucleus volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_volNucleus")</TD></TR>
+							<TR><TD>Right nucleus volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_volNucleus")</TD></TR>
+							<TR><TD>Total nucleus volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_volNucleus")</TD></TR>
+							<TR><TD>Left hemispheric volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_volHemisphere")</TD></TR>
+							<TR><TD>Right hemispheric volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_volHemisphere")</TD></TR>
+							<TR><TD>Total hemispheric volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_volHemisphere")</TD></TR>
+							<TR><TD>Left volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_vol")</TD></TR>
+							<TR><TD>Right volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_vol")</TD></TR>
+							<TR><TD>Total volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_vol")</TD></TR>
+							<TR><TD>Left hippocampus volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_hippo")</TD></TR>
+							<TR><TD>Right hippocampus volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_hippo")</TD></TR>
+							<TR><TD>Total hippocampus volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_hippo")</TD></TR>
+							<TR><TD>Left surface area (mm2)</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_surface")</TD></TR>
+							<TR><TD>Right surface area (mm2)</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_surface")</TD></TR>
+							<TR><TD>Total surface area (mm2)</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_surface")</TD></TR>
+							<TR><TD>Left cortical thickness (mm)</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_L_ct")</TD></TR>
+							<TR><TD>Right cortical thickness (mm)</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_R_ct")</TD></TR>
+							<TR><TD>Mean cortical thickness (mm)</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/gm_T_ct")</TD></TR>
+							<TR><TH>White matter:</TH></TR>
+							<TR><TD>Left cortical volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_L_hemis")</TD></TR>
+							<TR><TD>Right cortical volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_R_hemis")</TD></TR>
+							<TR><TD>Total cortical volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_T_hemis")</TD></TR>
+							<TR><TD>Left cerebellum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_L_volCerebellum")</TD></TR>
+							<TR><TD>Right cerebellum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_R_volCerebellum")</TD></TR>
+							<TR><TD>Total cerebellum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_T_volCerebellum")</TD></TR>
+							<TR><TD>Left volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_L_vol")</TD></TR>
+							<TR><TD>Right volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_R_vol")</TD></TR>
+							<TR><TD>Total volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_T_vol")</TD></TR>
+							<TR><TD>Corpus callosum volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/wm_cc")</TD></TR>
+							<TR><TH>Cerebrospinal fluid:</TH></TR>
+							<TR><TD>Ventricle volume</TD><TD></TD><TD>$!item.getStringProperty("freesurfer:fsAssessorData/csf_ventricle")</TD></TR>
+						</TABLE>
+					</TD>
+					<TD valign="top" align="right">
+						#elementActionsBox($element $search_field $search_value $data.getSession().getAttribute("user") $item)
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</table>
+									
+
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+$page.setTitle("W2MHS Details")
+$page.setLinkColor($ui.alink)
+$page.setVlinkColor($ui.vlink)
+#if ($data.getParameters().getString("popup"))
+	#set ($popup = $data.getParameters().getString("popup") )
+	#set ($popup = "false")
+#end
+<TABLE width="100%">
+	<TR>
+		<TD>
+			<table width="100%">
+				<TR>
+					<TD align="left" valign="middle">
+						<font face="$ui.sansSerifFonts" size="3"><b>W2MHS Details</b></font>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE width="100%">
+				<TR>
+					<TD valign="top">
+						<TABLE>
+							<TR><TD>MRSession</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/imageSession_ID")</TD></TR>
+							<TR><TD>ID</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/label")</TD></TR>
+							<TR><TD>Project</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/project")</TD></TR>
+							<tr></tr>	
+							<TR><TH>Algorithm parameters</TH></TR>
+							<TR><TD>Build files location</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/buildPath")</TD></TR>
+							<TR><TH>Probability map threshold</TH><TH></TH><TH>WMH total volume (mm3)</TH></TR>
+							<TR><TD>0.40</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_040")</TD></TR>
+							<TR><TD>0.45</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_045")</TD></TR>
+							<TR><TD>0.50</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_050")</TD></TR>
+							<TR><TD>0.55</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_055")</TD></TR>
+							<TR><TD>0.60</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_060")</TD></TR>
+							<TR><TD>0.65</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_065")</TD></TR>
+							<TR><TD>0.70</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_070")</TD></TR>
+							<TR><TD>0.75</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_075")</TD></TR>
+							<TR><TD>0.80</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_080")</TD></TR>
+							<TR><TD>0.85</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_085")</TD></TR>
+							<TR><TD>0.90</TD><TD></TD><TD>$!item.getStringProperty("w2mhs:w2mhsAssessorData/WMH_Volume_probability_map_thr_090")</TD></TR>
+
+						</TABLE>
+					</TD>
+					<TD valign="top" align="right">
+						#elementActionsBox($element $search_field $search_value $data.getSession().getAttribute("user") $item)
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</table>
+									
+
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:vbm="http://nrg.wustl.edu/vbm" xmlns:xdat="http://nrg.wustl.edu/xdat" xmlns:xnat="http://nrg.wustl.edu/xnat"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nrg.wustl.edu/vbm">
+	<xs:import namespace="http://nrg.wustl.edu/xnat" schemaLocation="../xnat/xnat.xsd"/>
+	<xs:element name="VBM Assessor" type="vbm:vbmAssessorData"/>
+	<xs:complexType name="vbmAssessorData">
+		<xs:complexContent>
+			<xs:extension base="xnat:mrAssessorData">
+				<xs:sequence>
+					<xs:element maxOccurs="1" name="GM_Volume" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WM_Volume" type="xs:float"/>
+					<xs:element maxOccurs="1" name="CSF_Volume" type="xs:float"/>
+					<xs:element maxOccurs="1" name="HYPL_Volume" type="xs:float"/>
+					<xs:element maxOccurs="1" name="HYPR_Volume" type="xs:float"/>
+					<xs:element maxOccurs="1" name="StereotaxicSpace" type="xs:string"/>
+					<xs:element maxOccurs="1" name="AlgoNorm" type="xs:string"/>
+					<xs:element maxOccurs="1" name="AtlasHyp" type="xs:string"/>
+					<xs:element maxOccurs="1" name="baseScanNumber" type="xs:string"/>			
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

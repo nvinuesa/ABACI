@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:lst="http://nrg.wustl.edu/lst" xmlns:xdat="http://nrg.wustl.edu/xdat" xmlns:xnat="http://nrg.wustl.edu/xnat"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nrg.wustl.edu/lst">
+	<xs:import namespace="http://nrg.wustl.edu/xnat" schemaLocation="../xnat/xnat.xsd"/>
+	<xs:element name="LST Assessor" type="lst:lstAssessorData"/>
+	<xs:complexType name="lstAssessorData">
+		<xs:complexContent>
+			<xs:extension base="xnat:mrAssessorData">
+				<xs:sequence>
+					<xs:element maxOccurs="1" name="buildPath" type="xs:string"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_005" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_010" type="xs:float"/>		
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_015" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_020" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_025" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_030" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_035" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_040" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_045" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_050" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_055" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_060" type="xs:float"/>		
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_065" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_070" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_075" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_080" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_085" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_090" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_095" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_initial_thr_100" type="xs:float"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

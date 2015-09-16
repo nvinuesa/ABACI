@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:freesurfer="http://nrg.wustl.edu/freesurfer" xmlns:xdat="http://nrg.wustl.edu/xdat" xmlns:xnat="http://nrg.wustl.edu/xnat"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nrg.wustl.edu/freesurfer">
+	<xs:import namespace="http://nrg.wustl.edu/xnat" schemaLocation="../xnat/xnat.xsd"/>
+	<xs:element name="Freesurfer Assessor" type="freesurfer:fsAssessorData"/>
+	<xs:complexType name="fsAssessorData">
+		<xs:complexContent>
+			<xs:extension base="xnat:mrAssessorData">
+				<xs:sequence>
+					<xs:element maxOccurs="1" name="fs_version" type="xs:string"/>
+					<xs:element maxOccurs="1" name="gm_L_volCortex" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_volCortex" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_volCortex" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_volCerebellum" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_volCerebellum" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_volCerebellum" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_volNucleus" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_volNucleus" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_volNucleus" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_volHemisphere" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_volHemisphere" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_volHemisphere" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_vol" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_vol" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_vol" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_hippo" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_hippo" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_hippo" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_surface" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_surface" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_surface" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_L_ct" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_R_ct" type="xs:float"/>
+					<xs:element maxOccurs="1" name="gm_T_ct" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_L_hemis" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_R_hemis" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_T_hemis" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_L_volCerebellum" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_R_volCerebellum" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_T_volCerebellum" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_L_vol" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_R_vol" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_T_vol" type="xs:float"/>
+					<xs:element maxOccurs="1" name="wm_cc" type="xs:float"/>
+					<xs:element maxOccurs="1" name="csf_ventricle" type="xs:float"/>
+					<xs:element maxOccurs="1" name="icv" type="xs:float"/>		
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

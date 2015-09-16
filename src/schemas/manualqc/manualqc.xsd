@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:manualqc="http://nrg.wustl.edu/manualqc" xmlns:xdat="http://nrg.wustl.edu/xdat" xmlns:xnat="http://nrg.wustl.edu/xnat"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nrg.wustl.edu/manualqc">
+	<xs:import namespace="http://nrg.wustl.edu/xnat" schemaLocation="../xnat/xnat.xsd"/>
+	<xs:element name="ManualQC Assessor" type="manualqc:manualqcAssessorData"/>
+	<xs:complexType name="manualqcAssessorData">
+		<xs:complexContent>
+			<xs:extension base="xnat:mrAssessorData">
+				<xs:sequence>
+					<xs:element maxOccurs="1" name="Position_T1" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Quality_T1" type="xs:boolean"/>
+					<xs:element maxOccurs="1" name="Contrast_T1" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Hypersignaux_SB_T1" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Hyposignaux_SB_T1" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Comments_T1" type="xs:string"/>		
+					<xs:element maxOccurs="1" name="Position_FLAIR" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Quality_FLAIR" type="xs:boolean"/>
+					<xs:element maxOccurs="1" name="Contrast_FLAIR" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Hypersignaux_SB_FLAIR" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Hyposignaux_SB_FLAIR" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Comments_FLAIR" type="xs:string"/>
+					<xs:element maxOccurs="1" name="Position_T2" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Quality_T2" type="xs:boolean"/>
+					<xs:element maxOccurs="1" name="Contrast_T2" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Hypersignaux_SB_T2" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Hyposignaux_SB_T2" type="xs:integer"/>
+					<xs:element maxOccurs="1" name="Comments_T2" type="xs:string"/>	
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

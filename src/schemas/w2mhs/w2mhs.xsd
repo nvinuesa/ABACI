@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns:w2mhs="http://nrg.wustl.edu/w2mhs" xmlns:xdat="http://nrg.wustl.edu/xdat" xmlns:xnat="http://nrg.wustl.edu/xnat"
+ xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nrg.wustl.edu/w2mhs">
+	<xs:import namespace="http://nrg.wustl.edu/xnat" schemaLocation="../xnat/xnat.xsd"/>
+	<xs:element name="W2MHS Assessor" type="w2mhs:w2mhsAssessorData"/>
+	<xs:complexType name="w2mhsAssessorData">
+		<xs:complexContent>
+			<xs:extension base="xnat:mrAssessorData">
+				<xs:sequence>
+					<xs:element maxOccurs="1" name="buildPath" type="xs:string"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_040" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_045" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_050" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_055" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_060" type="xs:float"/>		
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_065" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_070" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_075" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_080" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_085" type="xs:float"/>
+					<xs:element maxOccurs="1" name="WMH_Volume_probability_map_thr_090" type="xs:float"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

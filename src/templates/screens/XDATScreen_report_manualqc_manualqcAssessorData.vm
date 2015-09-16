@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+$page.setTitle("Manual Quality Control Details")
+$page.setLinkColor($ui.alink)
+$page.setVlinkColor($ui.vlink)
+#if ($data.getParameters().getString("popup"))
+	#set ($popup = $data.getParameters().getString("popup") )
+	#set ($popup = "false")
+#end
+<TABLE width="100%">
+	<TR>
+		<TD>
+			<table width="100%">
+				<TR>
+					<TD align="left" valign="middle">
+						<font face="$ui.sansSerifFonts" size="3"><b>Manual Quality Control Details</b></font>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE width="100%">
+				<TR>
+					<TD valign="top">
+						<TABLE>
+							<TR><TD>MRSession</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/imageSession_ID")</TD></TR>
+							<TR><TD>Date</TD><TD></TD><TD>$!item.getProperty("manualqc:manualqcAssessorData/date")</TD></TR>
+							<TR><TD>Time</TD><TD></TD><TD>$!item.getProperty("manualqc:manualqcAssessorData/time")</TD></TR>
+							<TR><TD>Note</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/note")</TD></TR>
+							<TR><TD>ID</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/label")</TD></TR>
+							<TR><TD>Project</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/project")</TD></TR>
+							<tr></tr>	
+							<TR><TH>T1</TH><TH></TH><TH>Quality (1 to 5)</TH></TR>
+							<TR><TD>Head Position</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Position_T1")</TD></TR>
+							<TR><TD>Quality</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Quality_T1")</TD></TR>
+							<TR><TD>Contrast</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Contrast_T1")</TD></TR>
+							<TR><TD>Hypersignaux SB</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Hypersignaux_SB_T1")</TD></TR>
+							<TR><TD>Hyposignaux SB</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Hyposignaux_SB_T1")</TD></TR>
+							<TR><TD>Comments</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Comments_T1")</TD></TR>
+							<TR><TH>T2</TH><TH></TH><TH>Quality (1 to 5)</TH></TR>
+							<TR><TD>Head Position</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Position_T2")</TD></TR>
+							<TR><TD>Quality</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Quality_T2")</TD></TR>
+							<TR><TD>Contrast</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Contrast_T2")</TD></TR>
+							<TR><TD>Hypersignaux SB</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Hypersignaux_SB_T2")</TD></TR>
+							<TR><TD>Hyposignaux SB</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Hyposignaux_SB_T2")</TD></TR>
+							<TR><TD>Comments</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Comments_T2")</TD></TR>
+							<TR><TH>FLAIR</TH><TH></TH><TH>Quality (1 to 5)</TH></TR>
+							<TR><TD>Head Position</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Position_FLAIR")</TD></TR>
+							<TR><TD>Quality</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Quality_FLAIR")</TD></TR>
+							<TR><TD>Contrast</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Contrast_FLAIR")</TD></TR>
+							<TR><TD>Hypersignaux SB</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Hypersignaux_SB_FLAIR")</TD></TR>
+							<TR><TD>Hyposignaux SB</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Hyposignaux_SB_FLAIR")</TD></TR>
+							<TR><TD>Comments</TD><TD></TD><TD>$!item.getStringProperty("manualqc:manualqcAssessorData/Comments_FLAIR")</TD></TR>
+						</TABLE>
+					</TD>
+					<TD valign="top" align="right">
+						#elementActionsBox($element $search_field $search_value $data.getSession().getAttribute("user") $item)
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</table>
+									
+
+

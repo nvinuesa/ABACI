@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+$page.setTitle("Manual Quality Control Details")
+$page.setLinkColor($ui.alink)
+$page.setVlinkColor($ui.vlink)
+#if ($data.getParameters().getString("popup"))
+	#set ($popup = $data.getParameters().getString("popup") )
+	#set ($popup = "false")
+#end
+<TABLE width="100%">
+	<TR>
+		<TD>
+			<table width="100%">
+				<TR>
+					<TD align="left" valign="middle">
+						<font face="$ui.sansSerifFonts" size="3"><b>Manual Quality Control Details</b></font>
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+	<TR>
+		<TD>
+			<TABLE width="100%">
+				<TR>
+					<TD valign="top">
+						<TABLE>
+							<TR><TD>MRSession</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/imageSession_ID")</TD></TR>
+							<TR><TD>ID</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/label")</TD></TR>
+							<TR><TD>Project</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/project")</TD></TR>
+							<tr></tr>	
+							<TR><TH>Algorithm parameters</TH></TR>
+							<TR><TD>Build files location</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/buildPath")</TD></TR>
+							<TR><TH>Initial threshold</TH><TH></TH><TH>WMH total volume (mm3)</TH></TR>
+							<TR><TD>0.05</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_005")</TD></TR>
+							<TR><TD>0.10</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_010")</TD></TR>
+							<TR><TD>0.15</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_015")</TD></TR>
+							<TR><TD>0.20</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_020")</TD></TR>
+							<TR><TD>0.25</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_025")</TD></TR>
+							<TR><TH>0.30</TH><TH></TH><TH>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_030")</TH></TR>
+							<TR><TD>0.35</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_035")</TD></TR>
+							<TR><TD>0.40</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_040")</TD></TR>
+							<TR><TD>0.45</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_045")</TD></TR>
+							<TR><TD>0.50</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_050")</TD></TR>
+							<TR><TD>0.55</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_055")</TD></TR>
+							<TR><TD>0.60</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_060")</TD></TR>
+							<TR><TD>0.65</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_065")</TD></TR>
+							<TR><TD>0.70</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_070")</TD></TR>
+							<TR><TD>0.75</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_075")</TD></TR>
+							<TR><TD>0.80</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_080")</TD></TR>
+							<TR><TD>0.85</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_085")</TD></TR>
+							<TR><TD>0.90</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_090")</TD></TR>
+							<TR><TD>0.95</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_095")</TD></TR>
+							<TR><TD>1.00</TD><TD></TD><TD>$!item.getStringProperty("lst:lstAssessorData/WMH_Volume_initial_thr_100")</TD></TR>
+
+						</TABLE>
+					</TD>
+					<TD valign="top" align="right">
+						#elementActionsBox($element $search_field $search_value $data.getSession().getAttribute("user") $item)
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</table>
+									
+
+
